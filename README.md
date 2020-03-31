@@ -49,7 +49,7 @@ if file not exists generate new key pair and save by this path.
 5. Run the node (keys for the node will be created automatically, if you want to use the already existing ones
 you should put them manually in the node work folder): ./node
 
-##Client 
+## Client 
 After the build, run the client in the bin folder to see the text with help.
 
 Example case of smart contract:
