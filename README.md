@@ -53,18 +53,23 @@ you should put them manually in the node work folder): ./node
 After the build, run the client in the bin folder to see the text with help.
 
 Example case of smart contract:
+
 1.We already have a raised node with rpc 127.0.0.1:50051
+
 2. Compile the solidity code with the following command: 
 ./client compile --code "path to the solidity code".
 After that we will get the folder with contract names containing the compiled contract code and json files contracts.
+
 3. Then we create contract with with the next command:
 ./client create_contract --host 127.0.0.1:50051 --code "Path_to_compiled_contract" --amount 0 --fee 100000 --keys ../../doc/base-account-keys
 As a result we get the contract address. (For example 692a70D2e424a56D2C6C27aA97D1)
+
 4. The following command is used to call up the contract:
 ./client message_call --host 127.0.0.1:50051 --to 692a70D2e424a56D2C6C27aA97D1 --amount 0 --fee 100000 --keys ../../doc/base-account-keys --message (12065fe0)
 In order to take the input, you need to run the command from the bin folder:
 ./client encode --code "Path to compiled contract" --data "getCodeAddressSize(Address(25o9qdcrVUTdMBtCAeAnxU2uaj3D))"
 getCodeAddressSize-called function, Address(25o9qdcrVUTdMBtCAeAnxU2uaj3D)-function call parameter(only parameters with type Address are written as Address(...))
+
 5. After the call we will get the result of the contract, in order to see the readable result from the bin folder the following command is started:
 ./client decode --code "Path to compiled contract" --method "getCodeAddressSize" --data (call result)
 
