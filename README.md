@@ -69,3 +69,11 @@ getCodeAddressSize-called function, Address(25o9qdcrVUTdMBtCAeAnxU2uaj3D)-functi
 5. After the call we will get the result of the contract, in order to see the readable result from the bin folder the following command is started:
 ./client decode --code "Path to compiled contract" --method "getCodeAddressSize" --data (call result)
 
+## Documentation (code based)
+For build project documentation need to use doxygen tool
+ 
+1. Install doxygen tool: $ sudo apt-get install doxygen
+2. Change work directory to doc folder: $ cd ./doc****
+3. Run build: $ doxygen Doxyfile 
+4. In directory create html folder with web site for documentation navigation and rendering.
+Open ./doc/html/index.html in internet browser to start use documentation
